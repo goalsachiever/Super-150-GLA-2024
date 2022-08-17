@@ -1,35 +1,37 @@
-
+package Lecture1;
 
 import java.util.Scanner;
 
-public class Pattern3
+public class Pattern5
 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt();
 
         int row = 1;
-        int space = 0;
-        int star = num;
+        int space = num -1;
+        int star = 1;
+
         while(row<=num)
         {
             int i=1;
             while(i<=space)
             {
-                System.out.print("  ");
+                System.out.print("   ");
                 i++;
             }
 
             int j=1;
-            while(j<=star)
+            while(j<=2*star-1)
             {
-                System.out.print("* ");
+                if(j%2!=0) System.out.print(" * ");
+                else System.out.print("   ");
                 j++;
             }
             System.out.println();
-            space+=2;
             row++;
-            star--;
+            space--;
+            star++;
         }
     }
 }
