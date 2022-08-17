@@ -17,6 +17,7 @@ public class Pattern7
                 System.out.print("* ");
                 i++;
             }
+            // mirroring
             if(row<num) star++;
             else star--;
             row++;
